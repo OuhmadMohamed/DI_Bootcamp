@@ -1,0 +1,11 @@
+#requirements.txt
+opencv-python
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+scipy
+ipykernel
+python-dotenv
+mediapipe
