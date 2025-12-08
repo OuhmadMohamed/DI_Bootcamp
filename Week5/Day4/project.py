@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-"""
-detect_isolate_face.py
-
-Usage:
-    python detect_isolate_face.py --image chemin/vers/image.jpg [--out visage.npy] [--save-img visage.png] [--no-display]
-
-Fonctions:
- - charge une image (vérifie existence et format)
- - détecte les visages avec OpenCV (cascade Haar)
- - isole (crop) le premier visage détecté -> numpy.ndarray dtype=uint8, shape (h, w, 3)
- - sauvegarde la matrice avec numpy.save()
- - affiche l'image originale (rectangle) et le crop
- - optionnel: si mediapipe est installé, calcule des landmarks et estime une expression simple
-"""
 import argparse
 import os
 import sys
