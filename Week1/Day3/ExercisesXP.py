@@ -1,4 +1,4 @@
-#🌟 Exercise 1: Converting Lists into Dictionaries
+#Exercise 1: Converting Lists into Dictionaries
 #Key Python Topics:
 #
 #Creating dictionaries
@@ -21,7 +21,7 @@ valus = [10,20,30]
 result_dict = dict(zip(keys, valus))
 print(result_dict)
 ############################################################
-#🌟 Exercise 2: Cinemax #2
+#Exercise 2: Cinemax #2
 #Key Python Topics:
 #
 #Looping through dictionaries
@@ -85,7 +85,7 @@ while True:
     print(f"{name.capitalize()}(age{age}):${price}")
 print(f"Total cost for the family :${total_cost}")
 ############################################################
-#🌟 Exercise 3: Zara
+#Exercise 3: Zara
 #Key Python Topics:
 #
 #Creating dictionaries
@@ -159,7 +159,7 @@ brand.update(more_on_zara)
 print("Updated brand dictionary after merging with more_on_zara:")
 
 #############################################################
-#🌟 Exercise 4: Disney Characters
+#Exercise 4: Disney Characters
 #Key Python Topics:
 #
 #Looping with indexes
