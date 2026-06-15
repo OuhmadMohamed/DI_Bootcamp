@@ -1,0 +1,32 @@
+class AnagramChecker:
+    def __init__(self, word_list_file):
+        """
+        Load words from the file into a set for fast lookups.
+        """
+        with open(word_list_file, "r") as file:
+            self.words = {word.strip().lower() for word in file}
+
+    def is_valid_word(self, word):
+        """
+        Check if the word exists in the dictionary.
+        """
+        return word.lower() in self.words
+
+    def is_anagram(self, word1, word2):
+        """
+        Check if two words are anagrams.
+        """
+        return sorted(word1.lower()) == sorted(word2.lower())
+
+    def get_anagrams(self, word):
+        """
+        Return all anagrams of the given word from the word list.
+        """
+        word = word.lower()
+        anagrams = []
+
+        for candidate in self.words:
+            if candidate != word and self.is_anagram(word, candidate):
+                anagrams.append(candidate)
+
+        return anagrams
