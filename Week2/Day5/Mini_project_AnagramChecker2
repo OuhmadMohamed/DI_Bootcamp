@@ -1,0 +1,40 @@
+from anagram_checker import AnagramChecker
+
+
+def main():
+    checker = AnagramChecker("wordlist.txt")
+
+    while True:
+        user_word = input(
+            "\nEnter a word (or type 'exit' to quit): "
+        ).strip()
+
+        if user_word.lower() == "exit":
+            print("Goodbye!")
+            break
+
+        # Validation
+        if not user_word.isalpha():
+            print("Error: Please enter a single word containing only letters.")
+            continue
+
+        user_word = user_word.lower()
+
+        # Check validity
+        is_valid = checker.is_valid_word(user_word)
+
+        print("\nYOUR WORD:", user_word.upper())
+        print("This is a valid English word." if is_valid
+              else "This is NOT a valid English word.")
+
+        # Find anagrams
+        anagrams = checker.get_anagrams(user_word)
+
+        if anagrams:
+            print("Anagrams for your word:", ", ".join(sorted(anagrams)))
+        else:
+            print("No anagrams found.")
+
+
+if __name__ == "__main__":
+    main()
